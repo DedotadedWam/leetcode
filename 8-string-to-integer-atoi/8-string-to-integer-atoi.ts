@@ -1,6 +1,6 @@
 function myAtoi(s: string): number {
     let isNeg: boolean = false;
-    const intArray: number[] = [];
+    let intString: string | number = "";
     let i: number = 0;
     
     function isCharNumber(c: string): boolean {
@@ -25,13 +25,13 @@ function myAtoi(s: string): number {
     
     if (isCharNumber(s[i])) {
         while (isCharNumber(s[i + 1])) {
-            intArray.push(Number(s[i]))
+            intString += s[i]
             i++;
         }
-        intArray.push(Number(s[i]))
-        let result = Number(intArray.join(''));
-        result = isNeg ? -1 * result : result;
-        return result > 2147483647 ? 2147483647 : result < -2147483648 ? -2147483648 : result;
+        intString += s[i]
+        intString = Number(intString);
+        intString = isNeg ? -1 * intString : intString;
+        return intString > 2147483647 ? 2147483647 : intString < -2147483648 ? -2147483648 : intString;
     }
     
     return 0;
