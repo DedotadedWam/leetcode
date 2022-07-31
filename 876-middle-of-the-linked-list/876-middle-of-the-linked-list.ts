@@ -11,14 +11,7 @@
  */
 
 function middleNode(head: ListNode | null): ListNode | null {
-    let counter: number = nodeCounter(head, 0);
-    
-    console.log(counter)
-    
-    counter = Math.floor(counter / 2)
-    
-    console.log(counter)
-    
+    let counter: number = Math.floor(nodeCounter(head, 0) / 2);
     return getMiddle(head, counter)
 };
 
