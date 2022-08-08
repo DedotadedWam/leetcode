@@ -2,28 +2,6 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-// var threeSum = function(nums) {
-//     const usedTriplets = {};
-//     const result = [];
-    
-//     for (let a = 0; a < nums.length; a++) {
-//         for (let b = a + 1; b < nums.length; b++) {
-//             for (let c = b + 1; c < nums.length; c++) {
-//                 if (nums[a] + nums[b] + nums[c] !== 0) continue;
-
-//                 let candidate = [nums[a], nums[b], nums[c]].sort((a, b) => a - b);
-//                 let candidateString = JSON.stringify(candidate)
-
-//                 if (usedTriplets[candidateString]) continue;
-
-//                 usedTriplets[candidateString] = true;
-//                 result.push(candidate);
-//                 break;
-//             }
-//         }
-//     }
-//     return result;
-// };
 
 var threeSum = function(nums, target = 0) {
     const result = [];
