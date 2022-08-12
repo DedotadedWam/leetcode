@@ -2,24 +2,6 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
-    let count = 0;
-    
-    function innerFunk(stepsTravelled) {
-        if (stepsTravelled > n) return;
-        if (stepsTravelled === n) {
-            count++;
-            return;
-        }
-                
-        innerFunk(stepsTravelled + 1);
-        innerFunk(stepsTravelled + 2);
-    }
-    
-    innerFunk(0)
-    
-    return count;
-};
 
 var climbStairs = function(n, memo = {}) {
     if (n <= 2) {
