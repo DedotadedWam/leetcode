@@ -7,7 +7,6 @@ var countAndSay = function(n) {
     
     let x = countAndSay(n-1)
     
-    let pairs = [];
     let current = [x[0], 1];
     
     let result = ''
