@@ -10,22 +10,25 @@ var countAndSay = function(n) {
     let pairs = [];
     let current = [x[0], 1];
     
+    let result = ''
+
+    
     for (let i = 1; i < x.length; i++){
         if (x[i] === x[i - 1]) {
             current[1]++;
         } else {
-            pairs.push(current);
+            result = result + current[1] + current[0];
             current = [x[i], 1];
         }
     }
     
-    pairs.push(current);
+    result = result + current[1] + current[0];
     
-    let result = ''
+//     let result = ''
     
-    pairs.forEach(([number, count]) => {
-        result = result + count + number;
-    })
+//     pairs.forEach(([number, count]) => {
+//         result = result + count + number;
+//     })
     
     return result;
 };
