@@ -24,11 +24,5 @@ var countAndSay = function(n) {
     
     result = result + current[1] + current[0];
     
-//     let result = ''
-    
-//     pairs.forEach(([number, count]) => {
-//         result = result + count + number;
-//     })
-    
     return result;
 };
